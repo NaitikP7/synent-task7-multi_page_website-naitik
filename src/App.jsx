@@ -1,16 +1,18 @@
 import React from 'react'
-import './index.css'
+import './styles/index.css'
 import { Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
+import Landing from './components/Landing'
 import Services from './components/Services'
 import About from './components/About'
 import Contact from './components/Contact'
 import NotFound from './components/NotFound'
+import Home from './components/Home'
 const App = () => {
   return (
-    <div className='container h-screen w-full bg-gray-800 text-white' >
+    <div className='h-screen w-full text-black bg-gray-50' >
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/home' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
