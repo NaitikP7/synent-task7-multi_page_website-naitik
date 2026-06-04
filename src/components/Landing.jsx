@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../styles/home.css'
+import '../styles/landing.css'
 import '../styles/index.css'
 import cardB from '../assets/images/card-background.jpg'
 import tile5 from '../assets/images/tile5.jpg'

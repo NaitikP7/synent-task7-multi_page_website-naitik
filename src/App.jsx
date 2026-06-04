@@ -7,12 +7,16 @@ import About from './components/About'
 import Contact from './components/Contact'
 import NotFound from './components/NotFound'
 import Home from './components/Home'
+import videos from './components/videos.js'
+import Portfolio from './components/Portfolio.jsx'
+
 const App = () => {
   return (
     <div className='h-screen w-full text-black bg-gray-50' >
       <Routes>
         <Route path='/' element={<Landing/>}/>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/home' element={<Home videos={videos} />}/>
+          <Route path="/portfolio" element={<Portfolio />} />
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>

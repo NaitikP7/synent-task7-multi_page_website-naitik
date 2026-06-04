@@ -1,62 +1,28 @@
-.grid_container{
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr) ;
-    gap: 10px;
-    grid-template-areas: 
-    "box1 box2 box3 box3"
-    "box1 box5 box4 box6"
-    "box7 box5 box8 box8"
-    ;
-}
-
-.grid_container div{
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.08);
-    font-size: 110px;
-    font-weight: 500;
-    text-align: end;
-    height: 100%;
-}
-
-.card{
-    display: grid;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: transform 0.3s ease;
-}
-
-#about, #contact {
-    background-size: cover;
-}
-
-.card img{
-    display: none;
-}
-
-.card > *{
-    grid-area: 1/1;
-}
-
-.card p{
-    z-index: 1;
-    user-select: none;
-    place-self: end end;
-    line-height: 0.8;
-    padding: 10px;
-    background: linear-gradient(to bottom, rgb(236, 163, 112), rgb(99, 69, 47));
-
+.hero-text {
+    background: linear-gradient(135deg, #b87333, #5a3520);
     background-clip: text;
     -webkit-background-clip: text;
-
-    color: transparent;
     -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
-.card:hover{
+.hero-tag{
+    color: rgb(44, 26, 16);
+}
+
+.hero-button{
+    color: #5a3520;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #eaeaea;
     cursor: pointer;
-    transform: scale(1.02);
+    border: 1px solid #e8e8e8;
+    transition: all 0.5s ease;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.hero-button:hover{
+    color: #b87333;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
