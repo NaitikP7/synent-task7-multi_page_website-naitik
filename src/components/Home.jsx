@@ -21,7 +21,7 @@ const Home = (props) => {
     const navigate = useNavigate();
     const portfolioRef = useRef(null);
 
-    const handleBtn = ()=>{
+    const handleBtn = () => {
         navigate("/portfolio")
     }
 
@@ -47,7 +47,7 @@ const Home = (props) => {
                             We <span className='font-bold'>tranform</span> ordinary spaces into meaningful experiences, blending creativity, functionality, and timeless elegance to reflect your unique <span className='italic'>lifestyle</span>.
                         </p>
                         <p className='hero-tag leading-tight mt-5 max-w-xl text-4xl'>Your Space, Reimagined. <br />Your Vision, Realized.</p>
-                        
+
                     </div>
                     <div className='h-[30%] relative flex flex-col justify-center'>
                         <div className='flex absolute left-0 top-[20%] translate-x-[50%] gap-4 items-center'>
@@ -57,10 +57,10 @@ const Home = (props) => {
                             <Astroid size={20} color="#683818" strokeWidth={2} />
                             <button className='hero-button' onClick={handleGetInTouchClick}>Get in Touch</button>
                         </div>
-                        <hr className=" w-1/4 border-3 border-[#452e1c] absolute bottom-0 right-0"/>
-                        <hr className=" h-full border-3 border-[#452e1c ] absolute bottom-0 right-0"/>
+                        <hr className=" w-1/4 border-3 border-[#452e1c] absolute bottom-0 right-0" />
+                        <hr className=" h-full border-3 border-[#452e1c ] absolute bottom-0 right-0" />
                     </div>
-                    
+
                 </div>
             </section>
             <div ref={portfolioRef}>

@@ -10,7 +10,7 @@
     { to: '/contact', label: 'Contact' },
   ]
 
-  const Navbar = () => {
+  const Navbar = ({ light = false }) => {
     const { pathname } = useLocation()
     const [scrolled, setScrolled] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
@@ -28,7 +28,7 @@
     }, [pathname])
 
     return (
-      <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${light ? 'navbar--light' : ''}`}>
         <div className="navbar__inner">
           {/* ── Logo ──────────────────────────────────── */}
           <Link to="/" className="navbar__logo" aria-label="Home">  

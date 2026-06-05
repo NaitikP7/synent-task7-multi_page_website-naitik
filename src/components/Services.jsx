@@ -111,7 +111,7 @@ const Services = () => {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load()
-      videoRef.current.play().catch(() => {})
+      videoRef.current.play().catch(() => { })
     }
   }, [activeIndex])
 
@@ -126,9 +126,8 @@ const Services = () => {
           <video
             ref={videoRef}
             key={activeService.id}
-            className={`services-visual__media ${
-              isTransitioning ? '' : 'services-visual__media--entering'
-            }`}
+            className={`services-visual__media ${isTransitioning ? '' : 'services-visual__media--entering'
+              }`}
             src={activeService.video}
             poster={activeService.image}
             autoPlay
@@ -172,9 +171,8 @@ const Services = () => {
             {servicesData.map((service, index) => (
               <li
                 key={service.id}
-                className={`services-nav__item ${
-                  index === activeIndex ? 'services-nav__item--active' : ''
-                }`}
+                className={`services-nav__item ${index === activeIndex ? 'services-nav__item--active' : ''
+                  }`}
                 onClick={() => handleServiceChange(index)}
                 role="button"
                 tabIndex={0}
