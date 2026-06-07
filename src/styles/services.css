@@ -1,18 +1,6 @@
- /* ═══════════════════════════════════════════════════════════════
-   Services Page — Premium Styles
-   Colors & spacing derived from existing NEXA brand system
-   ═══════════════════════════════════════════════════════════════ */
-
-/* ── Entrance Animations ────────────────────────────────────── */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -21,39 +9,21 @@
 }
 
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(1.08);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(1.08); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes kenBurns {
-  0%   { transform: scale(1);    }
+  0%   { transform: scale(1); }
   50%  { transform: scale(1.08); }
-  100% { transform: scale(1);    }
-}
-
-@keyframes shimmer {
-  0%   { background-position: -200% 0; }
-  100% { background-position: 200% 0;  }
+  100% { transform: scale(1); }
 }
 
 @keyframes slideInContent {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ── Services Page Container ────────────────────────────────── */
 .services-page {
   min-height: 100vh;
   width: 100%;
@@ -61,20 +31,19 @@
   overflow-x: hidden;
 }
 
-/* ── Split Pane Layout ──────────────────────────────────────── */
 .services-split {
   display: flex;
   min-height: 100vh;
   position: relative;
 }
 
-/* ── Left Panel — Cinematic Visual Area ─────────────────────── */
 .services-visual {
   position: relative;
   width: 55%;
   min-height: 100vh;
   overflow: hidden;
   background: #1a120b;
+  flex-shrink: 0;
 }
 
 .services-visual__media {
@@ -93,7 +62,6 @@
              kenBurns 20s ease-in-out 0.8s infinite;
 }
 
-/* Gradient overlay for depth */
 .services-visual__overlay {
   position: absolute;
   inset: 0;
@@ -105,7 +73,6 @@
   pointer-events: none;
 }
 
-/* Project counter / label on the visual */
 .services-visual__label {
   position: absolute;
   bottom: 3rem;
@@ -133,7 +100,6 @@
   color: transparent;
 }
 
-/* ── Right Panel — Editorial Content ────────────────────────── */
 .services-content {
   width: 45%;
   min-height: 100vh;
@@ -145,7 +111,6 @@
   background: #f9fafb;
 }
 
-/* Small label */
 .services-label {
   font-size: 0.7rem;
   font-weight: 600;
@@ -156,9 +121,8 @@
   animation: fadeInUp 0.5s ease-out 0.1s both;
 }
 
-/* Main headline */
 .services-headline {
-  font-size: 2.6rem;
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
   font-weight: 650;
   line-height: 1.15;
   margin-bottom: 1.25rem;
@@ -170,7 +134,6 @@
   animation: fadeInUp 0.5s ease-out 0.2s both;
 }
 
-/* Description */
 .services-description {
   font-size: 0.95rem;
   line-height: 1.75;
@@ -180,7 +143,6 @@
   animation: fadeInUp 0.5s ease-out 0.3s both;
 }
 
-/* ── Service Navigation ─────────────────────────────────────── */
 .services-nav {
   list-style: none;
   margin: 0 0 2rem;
@@ -236,7 +198,6 @@
   font-weight: 580;
 }
 
-/* Active indicator dot */
 .services-nav__dot {
   width: 6px;
   height: 6px;
@@ -253,7 +214,6 @@
   transform: scale(1);
 }
 
-/* ── Active Service Detail ──────────────────────────────────── */
 .services-detail {
   padding: 1.5rem 0;
   margin-bottom: 2rem;
@@ -268,7 +228,6 @@
   max-width: 440px;
 }
 
-/* ── Highlights / Benefits ──────────────────────────────────── */
 .services-highlights {
   display: flex;
   flex-wrap: wrap;
@@ -307,55 +266,6 @@
   flex-shrink: 0;
 }
 
-/* ── CTA Section ────────────────────────────────────────────── */
-.services-cta {
-  animation: fadeInUp 0.5s ease-out 0.6s both;
-}
-
-.services-cta__button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1.8rem;
-  font-size: 0.88rem;
-  font-weight: 560;
-  letter-spacing: 0.02em;
-  color: #fff;
-  background: linear-gradient(135deg, #b87333, #7a4a26);
-  border: none;
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.25s ease, opacity 0.25s ease;
-  box-shadow: 0 2px 16px rgba(184, 115, 51, 0.25);
-}
-
-.services-cta__button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(184, 115, 51, 0.35);
-  opacity: 0.95;
-}
-
-.services-cta__button svg {
-  transition: transform 0.3s ease;
-}
-
-.services-cta__button:hover svg {
-  transform: translateX(3px);
-}
-
-.services-cta__secondary {
-  margin-top: 1rem;
-  font-size: 0.78rem;
-  line-height: 1.6;
-  color: #9a8b7a;
-  max-width: 380px;
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Enhanced Video Cards — Premium 3D
-   ═══════════════════════════════════════════════════════════════ */
-
 .premium-card {
   position: relative;
   flex-shrink: 0;
@@ -365,13 +275,11 @@
   overflow: hidden;
   perspective: 1200px;
   transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
-
-  /* Layered shadow system */
   box-shadow:
-    0 2px 8px rgba(26, 18, 11, 0.08),       /* tight ambient */
-    0 8px 24px rgba(26, 18, 11, 0.1),        /* mid depth */
-    0 20px 60px rgba(26, 18, 11, 0.06),      /* far ambient */
-    0 0 0 1px rgba(184, 115, 51, 0.08);      /* subtle warm border */
+    0 2px 8px rgba(26, 18, 11, 0.08),
+    0 8px 24px rgba(26, 18, 11, 0.1),
+    0 20px 60px rgba(26, 18, 11, 0.06),
+    0 0 0 1px rgba(184, 115, 51, 0.08);
 }
 
 .premium-card::before {
@@ -381,18 +289,13 @@
   left: 0;
   right: 0;
   height: 40%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.12) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 0%, transparent 100%);
   z-index: 2;
   pointer-events: none;
   border-radius: 1.5rem 1.5rem 0 0;
   transition: opacity 0.5s ease;
 }
 
-/* Bottom reflection */
 .premium-card::after {
   content: '';
   position: absolute;
@@ -400,18 +303,12 @@
   left: 0;
   right: 0;
   height: 35%;
-  background: linear-gradient(
-    to top,
-    rgba(26, 18, 11, 0.45) 0%,
-    rgba(26, 18, 11, 0.1) 40%,
-    transparent 100%
-  );
+  background: linear-gradient(to top, rgba(26, 18, 11, 0.45) 0%, rgba(26, 18, 11, 0.1) 40%, transparent 100%);
   z-index: 2;
   pointer-events: none;
   border-radius: 0 0 1.5rem 1.5rem;
 }
 
-/* Hover — Lift, scale, glow */
 .premium-card:hover {
   transform: translateY(-14px) scale(1.025) rotateX(2deg);
   box-shadow:
@@ -419,7 +316,7 @@
     0 16px 40px rgba(26, 18, 11, 0.12),
     0 32px 80px rgba(26, 18, 11, 0.08),
     0 0 0 1px rgba(184, 115, 51, 0.15),
-    0 0 60px rgba(184, 115, 51, 0.08);         /* warm copper glow */
+    0 0 60px rgba(184, 115, 51, 0.08);
 }
 
 .premium-card:hover::before {
@@ -437,7 +334,6 @@
   transform: scale(1.04);
 }
 
-/* Card title overlay */
 .premium-card__title {
   position: absolute;
   bottom: 1.2rem;
@@ -455,9 +351,6 @@
   transform: translateY(-4px);
 }
 
-/* ── Responsive ──────────────────────────────────────────────── */
-
-/* Tablet */
 @media (max-width: 1023px) {
   .services-split {
     flex-direction: column;
@@ -475,10 +368,6 @@
     padding: 3rem 2rem 4rem;
   }
 
-  .services-headline {
-    font-size: 2.2rem;
-  }
-
   .services-visual__label {
     bottom: 2rem;
     left: 2rem;
@@ -489,7 +378,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   .services-visual {
     min-height: 40vh;
@@ -535,7 +423,7 @@
   }
 
   .premium-card {
-    width: 16rem;
+    width: 14rem;
     border-radius: 1.2rem;
   }
 }

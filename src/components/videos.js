@@ -9,26 +9,26 @@ import video5 from "../assets/videos/video5.mp4";
 const videos = [
   {
     id: 1,
-    title: "Living Room Design",
+    title: "Aurelia",
     src: video1,
   },
   {
     id: 2,
-    title: "Kitchen Design",
+    title: "Ivory Haven",
     src: video2,
   },
   {
     id: 3,
-    title: "Bedroom Design",
+    title: "The Urban Oasis",
     src: video3,
-  },{
+  }, {
     id: 4,
-    title: "Kitchen Design",
+    title: "Dusk till Dawn",
     src: video4,
   },
   {
     id: 5,
-    title: "Bedroom Design",
+    title: "Artisan 21",
     src: video5,
   },
 ];

@@ -1,12 +1,9 @@
-
-
-/* ── Base bar ─────────────────────────────────────── */
 .navbar {
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: min(80%, 1100px);
   z-index: 1000;
   transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
   background: transparent;
@@ -20,7 +17,6 @@
   box-shadow: 0 1px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* ── Inner wrapper ────────────────────────────────── */
 .navbar__inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -31,10 +27,9 @@
   height: 56px;
 }
 
-/* ── Logo ──────────────────────────────────────────── */
 .navbar__logo {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 0.6rem;
   text-decoration: none;
 }
@@ -56,11 +51,10 @@
   color: transparent;
 }
 
-/* ── Desktop nav links ────────────────────────────── */
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 7rem;
+  gap: clamp(1.5rem, 5vw, 7rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -80,8 +74,6 @@
   transition: color 0.25s ease, background 0.25s ease;
 }
 
-
-/* underline indicator */
 .navbar__link-bar {
   position: absolute;
   bottom: 2px;
@@ -104,7 +96,6 @@
   font-weight: 560;
 }
 
-/* ── CTA button (desktop) ─────────────────────────── */
 .navbar__cta {
   display: inline-flex;
   align-items: center;
@@ -120,6 +111,7 @@
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.25s ease, opacity 0.25s ease;
   box-shadow: 0 2px 12px rgba(184, 115, 51, 0.25);
+  white-space: nowrap;
 }
 
 .navbar__cta:hover {
@@ -128,9 +120,8 @@
   opacity: 0.93;
 }
 
-/* ── Hamburger (mobile) ───────────────────────────── */
 .navbar__hamburger {
-  display: none;            /* hidden on desktop */
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -165,7 +156,6 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ── Mobile Drawer ────────────────────────────────── */
 .navbar__mobile {
   position: fixed;
   top: 68px;
@@ -241,8 +231,11 @@
   box-shadow: 0 4px 20px rgba(184, 115, 51, 0.3);
 }
 
-/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 768px) {
+  .navbar {
+    width: calc(100% - 2rem);
+  }
+
   .navbar__links,
   .navbar__cta {
     display: none;
@@ -257,29 +250,26 @@
   }
 }
 
-/* Logo text → white */
 .navbar--light .navbar__logo-text {
-  background: linear-gradient(135deg, #ffffff, rgba(255,255,255,0.75));
+  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.75));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-/* Nav links → white */
 .navbar--light .navbar__link {
   color: rgba(255, 255, 255, 0.85);
 }
-
 
 .navbar--light .navbar__link--active {
   color: #ffffff;
 }
 
-/* Underline bar → white */
 .navbar--light .navbar__link-bar {
-  background: linear-gradient(90deg, #ffffff, rgba(255,255,255,0.6));
+  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.6));
 }
+
 .navbar--light .navbar__cta {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -304,4 +294,3 @@
   background: rgba(30, 20, 10, 0.55);
   box-shadow: 0 1px 24px rgba(0, 0, 0, 0.2);
 }
-
